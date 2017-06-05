@@ -9,9 +9,7 @@
 
 return array_replace_recursive(require "$fixinPath/config/web.php", [
     'loader' => [
-        'prefixes' => [
-            'App' => "$topPath/classes/App",
-        ] + require "$topPath/vendor/composer/autoload_psr4.php"
+        'prefixes' => require "$topPath/vendor/composer/autoload_psr4.php"
     ],
     'resourceManager' => [
         'definitions' => [
