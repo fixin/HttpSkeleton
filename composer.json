@@ -1,0 +1,11 @@
+{
+  "name": "fixin/HttpSkeleton",
+  "type": "project",
+  "homepage": "http://www.fixinphp.com",
+  "license": "proprietary",
+  "require": {
+    "php": "^7.1.3",
+    "fixin/Fixin": "dev-v1.0-alpha.2"
+  },
+  "minimum-stability": "dev"
+}

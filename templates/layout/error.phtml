@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+    <h1>
+        <?= \Fixin\Support\HttpStrings::STATUSES[$cargo instanceof \Fixin\Delivery\Cargo\HttpCargoInterface ? $cargo->getStatusCode() : 500] ?>
+    </h1>
+    <p>
+        <?= $content ?>
+    </p>
+</body>
+</html>
