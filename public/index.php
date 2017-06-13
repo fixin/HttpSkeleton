@@ -1,7 +1,5 @@
 <?php
 return (function () {
-    include dirname(__DIR__, 2) . '/Fixin/tools/performance/loadedClasses/begin.php';
-
     if (PHP_SAPI === 'cli-server') {
         $path = realpath(__DIR__ . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 
@@ -10,10 +8,9 @@ return (function () {
         }
     }
 
-    $config = include dirname(__DIR__) . '/config/loader.php';
+    $topPath = dirname(__DIR__);
+    $config = include $topPath . '/config/loader.php';
 
-    $application = include "{$fixinPath}/boosts/web.php";
+    $application = include $topPath . '/vendor/fixin/fixin/boosts/web.php';
     $application->run();
-
-    include dirname(__DIR__, 2) . '/Fixin/tools/performance/loadedClasses/end.php';
 })();

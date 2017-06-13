@@ -5,8 +5,7 @@ $hosts = [
     'localhost' => ['127.0.0.1'],
     // Add host names and their IP addresses
 ];
-$requestedHost = $_SERVER['SERVER_NAME'];
-$requestedHost = 'localhost';
+$requestedHost = mb_strtolower($_SERVER['SERVER_NAME']);
 
 if (!in_array($_SERVER['SERVER_ADDR'], $hosts[$requestedHost] ?? [])) {
     header("HTTP/1.1 404 Not Found");

@@ -20,13 +20,6 @@ return array_replace_recursive(require "$fixinPath/config/web.php", [
                     ]
                 ]
             ]
-        ],
-        'abstractFactories' => [
-            'namespaceFallback' => [
-                'options' => [
-                    'searchOrder' => ['App', 'Fixin']
-                ]
-            ]
         ]
     ]
 ]);
